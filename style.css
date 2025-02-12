@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.header{
+    text-align: center;
+    padding: 20px;
+    background-color: #433624;
+    color: white;
+}
+
+
+.calender-header select {
+    padding: 5px;
+    font-size: 1.6rem;
+    border: none;
+    background: #ffffff;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.task-item p {
+    margin: 0;
+    flex: 1;
+    color: white;
+}
+
+.task-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: auto;
+    min-width: 30px;
+}
+
+
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #12121f;
+    color: white;
+}
+
+.calender-container{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-right: solid 5px #a3a38f66; */
+}
+
+.calender{
+    width: 40rem;
+    height: 47rem;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.calender-header{
+    width: 100%;
+    height: 8rem;
+    background-color: #6a9dd1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.calender-header i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.calender-header h1{
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.weekdays{
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays th{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(39.2rem/ 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days td{
+    width: calc(35.2rem/ 7);
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: ease-out 0.2s;
+}
+
+.days td:hover:not(.selected-date){
+    background-color: #262626;
+    cursor: pointer;
+    color: white;
+}
+
+.prev-date, .next-date{
+    opacity: 0.5;
+}
+
+.selected-date{
+    background-color: #6a9dd1;
+    color: white;
+}
+
+ .form-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.todoform-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.tasklist-header{
+    width: 100%;
+    text-align: center;
+    height: 6rem;
+    background-color: #6a9dd1;
+}
+
+.tasklist-header h1{
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+}
+
+.todo-inputscontainer{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-group{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label{
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+} 
+
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.button-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #2980b9;
+}
+
+.close-btn{
+    background-color: red;
+}
+
+.task-actions{
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    width: 50%;
+    padding: 5px;
+}
+
+.save-btn{
+    background-color: #32e00b;
+}

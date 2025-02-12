@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="header">To Do List</h1>
+    <div class="container">
+        <div class="calender-container">
+            <div class="calender">
+                <div class="calender-header">
+                    <i id="prev-month" class="fas fa-angle-left prev"></i>
+                    <select id="month-select"></select>
+                    <select id="year-select"></select>
+                    <i id="next-month" class="fas fa-angle-right next"></i>
+                </div>
+                
+
+                <table>
+                    <thead>
+                        <tr class="weekdays">
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="days" id="calender-body"></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="selected-date" class="form-container">
+            <div class="todoform-container">
+                <div class="tasklist-header">
+                    <h1>Add Task</h1>
+                </div>
+                <div class="todo-inputscontainer">
+                    <div class="form-group">
+                        <label for="taskdate">Task Date:</label>
+                        <input type="text" id="taskdate" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label for="taskname">Task Name:</label>
+                        <input type="text" id="taskname" />
+                    </div>
+                    <div class="form-group">
+                        <label for="taskdescription">Task Description:</label>
+                        <textarea id="taskdescription" rows="5" cols="50"></textarea>
+                    </div>
+    
+                    <div class="button-group">
+                        <button class="login-btn" onclick="validateDataAndSave()" type="button">Add</button>
+                    <button class="close-btn" onclick="closeTask()" type="button">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
